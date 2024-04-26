@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Load a DataFrame from a CSV file (replace 'your_data.csv' with your actual file path)
+# Load a DataFrame from the CSV dataset
 df = pd.read_csv('customer_shopping_data.csv')
 
 # Check for missing values in the dataset
