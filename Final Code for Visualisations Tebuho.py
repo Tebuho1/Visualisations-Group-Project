@@ -8,7 +8,7 @@ import scipy.stats as stats
 file_path = 'preprocessed_customer_shopping_data.csv'
 df = pd.read_csv(file_path)
 
-print("This is Visualisation 1: Figure 1") #Visualisation 1
+print("This is Visualisation 18") #Visualisation 18
 # Encode categorical variables
 df['gender'] = df['gender'].map({'Male': 0, 'Female': 1})
 df['payment_method'] = df['payment_method'].map({'Credit Card': 0, 'Cash': 1})
@@ -26,7 +26,7 @@ plt.title('Correlation Matrix Heatmap')
 plt.savefig('heatmap_of_variable_correlations.png')
 plt.show()
 
-print("This is Visualisation 2: Figure 2") #Visualisation 2
+print("This is Visualisation 3") #Visualisation 3
 # Aggregate data for heatmap
 monthly_category_spend = df.groupby(['month', 'category'])['price'].sum().unstack()
 
@@ -40,7 +40,7 @@ plt.tight_layout()
 plt.savefig('monthly_spend_heatmap.png')
 plt.show()
 
-print("This is Visualisation 3: Figure 3") #Visualisation 3
+print("This is Visualisation 14") #Visualisation 14
 # Scatter plot for customer segmentation using price(transaction total spend per customer), age, and gender
 plt.figure(figsize=(12, 8), facecolor='white')
 sns.scatterplot(data=df, x='age', y='price', hue='gender', style='gender', s=100)
@@ -52,7 +52,7 @@ plt.grid(True)
 plt.savefig('customer_segmentation.png')
 plt.show()
 
-print ("This is Visualisation 4: Figure 4") #Visualisation 4
+print ("This is Visualisation 8") #Visualisation 8
 data = pd.read_csv('preprocessed_customer_shopping_data.csv')
 # Group by 'shopping_mall' and 'payment_method' and sum the 'quantity' column
 quantity_totals_by_mall = data.groupby(['shopping_mall', 'payment_method'])['quantity'].sum().unstack()
